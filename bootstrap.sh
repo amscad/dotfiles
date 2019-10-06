@@ -16,11 +16,11 @@ fi
 
 sudo apt-get install -qq \
   build-essential \
+  cmake \
   curl \
   docker.io \
   gdb \
   git \
-  google-cloud-sdk-app-engine-go \
   hugo \
   jq \
   mosh \
@@ -32,6 +32,7 @@ sudo apt-get install -qq \
   python3-venv \
   python3-wheel \
   silversearcher-ag \
+  tmux \
   tree \
   unzip \
   wget \
@@ -45,8 +46,6 @@ if ! [ -x "$(command -v go)" ]; then
   rm -f "go${GO_VERSION}.linux-amd64.tar.gz"
   export PATH="/usr/local/go/bin:$PATH"
 fi
-
-#sudo apt install openjdk-8-jdk
 
 if [ ! -d "$(go env GOPATH)" ]; then
   echo " ==> Installing Go tools"
@@ -78,8 +77,21 @@ if [ ! -d "$(go env GOPATH)" ]; then
   cp -r $(go env GOPATH)/bin/* /usr/local/bin/
 fi
 
-sudo snap install hub --classic
-sudo snap install fzf --classic
-sudo snap install google-cloud-sdk --classic
-sudo snap install ripgrep --classic
+if ! [ -x "$(command -v hub)" ]; then
+ sudo snap install hub --classic
+fi
+if ! [ -x "$(command -v hub)" ]; then
+ sudo snap install google-cloud-sdk --classic
+fi
+if ! [ -x "$(command -v ripgrep)" ]; then
+ sudo snap install ripgrep --classic
+fi
 
+if [ ! -d "${HOME}/.fzf" ]; then
+  echo " ==> Installing fzf"
+  git clone https://github.com/junegunn/fzf "${HOME}/.fzf"
+  pushd "${HOME}/.fzf"
+  git remote set-url origin git@github.com:junegunn/fzf.git 
+  ${HOME}/.fzf/install --bin --64 --no-bash --no-zsh --no-fish
+  popd
+fi
