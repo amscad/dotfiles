@@ -10,24 +10,16 @@ if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   sudo add-apt-repository ppa:keithw/mosh-dev -y
   sudo add-apt-repository ppa:jonathonf/vim -y
 
-  CLOUD_SDK_SOURCE="/etc/apt/sources.list.d/google-cloud-sdk.list"
-  CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-  if [ ! -f "${CLOUD_SDK_SOURCE}" ]; then
-    echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a ${CLOUD_SDK_SOURCE}
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-  fi
-
   sudo apt-get update
   sudo apt-get upgrade -y
-fi<
+fi
 
-sudo apt-get install --qq \
+sudo apt-get install -qq \
   build-essential \
   curl \
   docker.io \
   gdb \
   git \
-  google-cloud-sdk \
   google-cloud-sdk-app-engine-go \
   hugo \
   jq \
@@ -39,7 +31,6 @@ sudo apt-get install --qq \
   python3-setuptools \
   python3-venv \
   python3-wheel \
-  ripgrep \
   silversearcher-ag \
   tree \
   unzip \
@@ -87,24 +78,8 @@ if [ ! -d "$(go env GOPATH)" ]; then
   cp -r $(go env GOPATH)/bin/* /usr/local/bin/
 fi
 
-#install commandline tools for github
-if ! [ -x "$(command -v hub)" ]; then
-  echo " ==> Installing hub .."
-  export HUB_VERSION="2.12.3"
-  wget https://github.com/github/hub/releases/download/v${HUB_VERSION}/hub-linux-amd64-${HUB_VERSION}.tgz
-  tar xf hub-linux-amd64-${HUB_VERSION}.tgz
-  chmod +x hub-linux-amd64-${HUB_VERSION}/bin/hub
-  cp hub-linux-amd64-${HUB_VERSION}/bin/hub /usr/local/bin
-  rm -rf hub-linux-amd64-${HUB_VERSION}
-  rm -f hub-linux-amd64-${HUB_VERSION}.tgz*
-fi
+sudo snap install hub --classic
+sudo snap install fzf --classic
+sudo snap install google-cloud-sdk --classic
+sudo snap install ripgrep --classic
 
-# command line fuzzy finder
-if [ ! -d "${HOME}/.fzf" ]; then
-  echo " ==> Installing fzf"
-  git clone https://github.com/junegunn/fzf "${HOME}/.fzf"
-  pushd "${HOME}/.fzf"
-  git remote set-url origin git@github.com:junegunn/fzf.git 
-  ${HOME}/.fzf/install --bin --64 --no-bash --no-zsh --no-fish
-  popd
-fi
