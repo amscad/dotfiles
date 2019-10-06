@@ -77,14 +77,26 @@ if [ ! -d "$(go env GOPATH)" ]; then
   cp -r $(go env GOPATH)/bin/* /usr/local/bin/
 fi
 
-if ! [ -x "$(command -v hub)" ]; then
+if ! [ -x "$(command -v snap list hub)" ]; then
  sudo snap install hub --classic
+ echo "installing github command line client"
+else
+ echo "checking for a refreshed version of hub"
+ sudo snap refresh hub --clasic
+ echo "hub may, or may not have been updated.  read the output message"
 fi
+
+if ! [ -x "$(command -v snap list ripgrep)" ]; then
+  sudo snap install ripgrep --classic
+  echo "installing ripgrep commad line client"
+else
+  echo "checking for a refreshed version of ripgrep"
+  sudo snap refresh ripgrep --classic
+  echo "ripgrep may, or may not have been updated. read the output messages"
+fi
+
 if ! [ -x "$(command -v hub)" ]; then
  sudo snap install google-cloud-sdk --classic
-fi
-if ! [ -x "$(command -v ripgrep)" ]; then
- sudo snap install ripgrep --classic
 fi
 
 if [ ! -d "${HOME}/.fzf" ]; then
