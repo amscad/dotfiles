@@ -38,13 +38,19 @@ sudo apt-get install -qq \
   wget \
   --no-install-recommends
 
-# install Go
+# # install Go
+# if ! [ -x "$(command -v go)" ]; then
+#   export GO_VERSION="1.13.1"
+#   wget "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz" 
+#   tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz" 
+#   rm -f "go${GO_VERSION}.linux-amd64.tar.gz"
+#   export PATH="/usr/local/go/bin:$PATH"
+# fi
+
 if ! [ -x "$(command -v go)" ]; then
-  export GO_VERSION="1.13.1"
-  wget "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz" 
-  tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz" 
-  rm -f "go${GO_VERSION}.linux-amd64.tar.gz"
-  export PATH="/usr/local/go/bin:$PATH"
+  sudo add-apt-repository ppa:longsleep/golang-backports
+  sudo apt-get update
+  sudo apt-get install golang-go
 fi
 
 if [ ! -d "$(go env GOPATH)" ]; then
