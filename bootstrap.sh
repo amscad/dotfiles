@@ -100,6 +100,7 @@ cat <<EOF > /var/www/html/index.html
 <html><body><h1>Hello World</h1>
 <p>This should install mosh!</p>
 </body></html>
+EOF
 
 if ! [ -x "$(command -v hub)" ]; then
  sudo snap install google-cloud-sdk --classic
