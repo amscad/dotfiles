@@ -17,7 +17,8 @@ fi
 
 sudo apt-get install -qq \
   build-essential \
-  cmake \
+  cmake3 \
+  cmake3-data \
   curl \
   gdb \
   git \
