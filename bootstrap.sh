@@ -95,13 +95,12 @@ else
   echo "ripgrep may, or may not have been updated. read the output messages"
 fi
 
-<<<<<<< HEAD
 sudo apt-get install -y apache2
 cat <<EOF > /var/www/html/index.html
 <html><body><h1>Hello World</h1>
 <p>This should install mosh!</p>
 </body></html>
-=======
+
 if ! [ -x "$(command -v hub)" ]; then
  sudo snap install google-cloud-sdk --classic
 fi
@@ -114,4 +113,3 @@ if [ ! -d "${HOME}/.fzf" ]; then
   ${HOME}/.fzf/install --bin --64 --no-bash --no-zsh --no-fish
   popd
 fi
->>>>>>> b565d4e9173feba6e3803051dc8014808a9a4395
