@@ -15,7 +15,7 @@ if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   sudo apt-get upgrade -y
 fi
 
-sudo apt-get install  \
+sudo apt-get install -qq \
   build-essential \
   cmake \
   curl \
