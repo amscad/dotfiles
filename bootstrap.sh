@@ -1,5 +1,6 @@
 # Borrowed from fatih's scripts for his iPad set up with digital ocean
 # from here: https://github.com/fatih/dotfiles/blob/master/workstation/bootstrap.sh
+#! /bin/bash
 
 UPGRADE_PACKAGES=${1:-none}
 
@@ -17,7 +18,6 @@ fi
 sudo apt-get install -qq \
   build-essential \
   curl \
-  docker.io \
   gdb \
   git \
   google-cloud-sdk-app-engine-go \
@@ -83,3 +83,8 @@ sudo snap install fzf --classic
 sudo snap install google-cloud-sdk --classic
 sudo snap install ripgrep --classic
 
+sudo apt-get install -y apache2
+cat <<EOF > /var/www/html/index.html
+<html><body><h1>Hello World</h1>
+<p>This should install mosh!</p>
+</body></html>
