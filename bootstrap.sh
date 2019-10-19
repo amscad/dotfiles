@@ -15,12 +15,12 @@ if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   sudo apt-get upgrade -y
 fi
 
-sudo apt-get install -qq \
+sudo apt-get install  \
   build-essential \
+  cmake \
   curl \
   gdb \
   git \
-  google-cloud-sdk-app-engine-go \
   hugo \
   jq \
   mosh \
@@ -32,6 +32,7 @@ sudo apt-get install -qq \
   python3-venv \
   python3-wheel \
   silversearcher-ag \
+  tmux \
   tree \
   unzip \
   wget \
@@ -45,8 +46,6 @@ if ! [ -x "$(command -v go)" ]; then
   rm -f "go${GO_VERSION}.linux-amd64.tar.gz"
   export PATH="/usr/local/go/bin:$PATH"
 fi
-
-#sudo apt install openjdk-8-jdk
 
 if [ ! -d "$(go env GOPATH)" ]; then
   echo " ==> Installing Go tools"
@@ -78,13 +77,41 @@ if [ ! -d "$(go env GOPATH)" ]; then
   cp -r $(go env GOPATH)/bin/* /usr/local/bin/
 fi
 
-sudo snap install hub --classic
-sudo snap install fzf --classic
-sudo snap install google-cloud-sdk --classic
-sudo snap install ripgrep --classic
+if ! [ -x "$(command -v snap list hub)" ]; then
+ sudo snap install hub --classic
+ echo "installing github command line client"
+else
+ echo "checking for a refreshed version of hub"
+ sudo snap refresh hub --clasic
+ echo "hub may, or may not have been updated.  read the output message"
+fi
 
+if ! [ -x "$(command -v snap list ripgrep)" ]; then
+  sudo snap install ripgrep --classic
+  echo "installing ripgrep commad line client"
+else
+  echo "checking for a refreshed version of ripgrep"
+  sudo snap refresh ripgrep --classic
+  echo "ripgrep may, or may not have been updated. read the output messages"
+fi
+
+<<<<<<< HEAD
 sudo apt-get install -y apache2
 cat <<EOF > /var/www/html/index.html
 <html><body><h1>Hello World</h1>
 <p>This should install mosh!</p>
 </body></html>
+=======
+if ! [ -x "$(command -v hub)" ]; then
+ sudo snap install google-cloud-sdk --classic
+fi
+
+if [ ! -d "${HOME}/.fzf" ]; then
+  echo " ==> Installing fzf"
+  git clone https://github.com/junegunn/fzf "${HOME}/.fzf"
+  pushd "${HOME}/.fzf"
+  git remote set-url origin git@github.com:junegunn/fzf.git 
+  ${HOME}/.fzf/install --bin --64 --no-bash --no-zsh --no-fish
+  popd
+fi
+>>>>>>> b565d4e9173feba6e3803051dc8014808a9a4395
