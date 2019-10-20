@@ -26,7 +26,8 @@ fi
 
 sudo apt-get install -qq \
   build-essential \
-  cmake \
+  cmake3 \
+  cmake3-data \
   curl \
   gdb \
   git \
@@ -35,6 +36,7 @@ sudo apt-get install -qq \
   mosh \
   openssh-server \
   python3 \
+  python3-dev \
   python3-flake8 \
   python3-pip \
   python3-setuptools \
