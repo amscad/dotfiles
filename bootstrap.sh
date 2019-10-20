@@ -3,17 +3,9 @@
 # Borrowed from fatih's scripts for his iPad set up with digital ocean
 # from here: https://github.com/fatih/dotfiles/blob/master/workstation/bootstrap.sh
 
-apt-get update
-sudo apt-get install -y apache2
-cat <<EOF > /var/www/html/index.html
-<html><body><h1>Hello World</h1>
-<p>This should install mosh!</p>
-</body></html>
-EOF
+# UPGRADE_PACKAGES=${1:-none}
 
-UPGRADE_PACKAGES=${1:-none}
-
-if [ "${UPGRADE_PACKAGES}" != "none" ]; then
+# if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   echo "==> Updating and upgrading packages ..."
 
   # Add third party repositories
@@ -22,9 +14,10 @@ if [ "${UPGRADE_PACKAGES}" != "none" ]; then
 
   sudo apt-get update
   sudo apt-get upgrade -y
-fi
+# fi
 
 sudo apt-get install -qq \
+  apache2
   build-essential \
   cmake3 \
   cmake3-data \
@@ -46,8 +39,16 @@ sudo apt-get install -qq \
   tmux \
   tree \
   unzip \
+  vim \
   wget \
   --no-install-recommends
+
+
+cat <<EOF > /var/www/html/index.html
+<html><body><h1>Hello World</h1>
+<p>This should install mosh!</p>
+</body></html>
+EOF
 
 # # install Go
 # if ! [ -x "$(command -v go)" ]; then
@@ -99,7 +100,7 @@ if ! [ -x "$(command -v snap list hub)" ]; then
  echo "installing github command line client"
 else
  echo "checking for a refreshed version of hub"
- sudo snap refresh hub --clasic
+ sudo snap refresh hub --classic
  echo "hub may, or may not have been updated.  read the output message"
 fi
 
