@@ -44,7 +44,3 @@ cat <<EOF > /var/www/html/index.html
 <p>This should install mosh!</p>
 </body></html>
 EOF
-
-git clone  https://github.com/amscad/cloud-shell /home/alex/cloud-shell
-cd /home/alex/cloud-shell
-./setup.sh
