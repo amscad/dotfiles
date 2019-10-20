@@ -17,7 +17,7 @@ if [ "${UPGRADE_PACKAGES}" != "none" ]; then
 fi
 
 sudo apt-get install -qq \
-  apache2
+  apache2 \
   build-essential \
   cmake \
   curl \
@@ -42,17 +42,12 @@ sudo apt-get install -qq \
   --no-install-recommends
 
 
-cat <<EOF > /var/www/html/index.html
-<html><body><h1>Hello World</h1>
-<p>This should install mosh!</p>
-</body></html>
-EOF
-
 if ! [ -x "$(command -v go)" ]; then
   sudo add-apt-repository ppa:longsleep/golang-backports
   sudo apt-get update
   sudo apt-get install golang-go -y
 fi
+
 
 if [ ! -d "$(go env GOPATH)" ]; then
   echo " ==> Installing Go tools"
