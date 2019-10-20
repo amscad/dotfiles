@@ -1,6 +1,15 @@
+#! /bin/bash
+
 # Borrowed from fatih's scripts for his iPad set up with digital ocean
 # from here: https://github.com/fatih/dotfiles/blob/master/workstation/bootstrap.sh
-#! /bin/bash
+
+apt-get update
+sudo apt-get install -y apache2
+cat <<EOF > /var/www/html/index.html
+<html><body><h1>Hello World</h1>
+<p>This should install mosh!</p>
+</body></html>
+EOF
 
 UPGRADE_PACKAGES=${1:-none}
 
@@ -50,7 +59,7 @@ sudo apt-get install -qq \
 if ! [ -x "$(command -v go)" ]; then
   sudo add-apt-repository ppa:longsleep/golang-backports
   sudo apt-get update
-  sudo apt-get install golang-go
+  sudo apt-get install golang-go -y
 fi
 
 if [ ! -d "$(go env GOPATH)" ]; then
@@ -100,13 +109,6 @@ else
   sudo snap refresh ripgrep --classic
   echo "ripgrep may, or may not have been updated. read the output messages"
 fi
-
-sudo apt-get install -y apache2
-cat <<EOF > /var/www/html/index.html
-<html><body><h1>Hello World</h1>
-<p>This should install mosh!</p>
-</body></html>
-EOF
 
 if ! [ -x "$(command -v hub)" ]; then
  sudo snap install google-cloud-sdk --classic
