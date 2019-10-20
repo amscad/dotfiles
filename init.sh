@@ -8,11 +8,6 @@ add-apt-repository ppa:jonathonf/vim -y
 apt-get update
 apt-get upgrade -y
 
-# sudo apt-get install -y \
-#   apache2 \
-#   build-essential \
-#   mosh
-
 sudo apt-get install -qq \
   apache2 \
   build-essential \
