@@ -5,7 +5,7 @@
 
 UPGRADE_PACKAGES=${1:-none}
 
-# if [ "${UPGRADE_PACKAGES}" != "none" ]; then
+if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   echo "==> Updating and upgrading packages ..."
 
   # Add third party repositories
