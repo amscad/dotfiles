@@ -3,7 +3,7 @@
 # Borrowed from fatih's scripts for his iPad set up with digital ocean
 # from here: https://github.com/fatih/dotfiles/blob/master/workstation/bootstrap.sh
 
-# UPGRADE_PACKAGES=${1:-none}
+UPGRADE_PACKAGES=${1:-none}
 
 # if [ "${UPGRADE_PACKAGES}" != "none" ]; then
   echo "==> Updating and upgrading packages ..."
@@ -14,13 +14,12 @@
 
   sudo apt-get update
   sudo apt-get upgrade -y
-# fi
+fi
 
 sudo apt-get install -qq \
   apache2
   build-essential \
-  cmake3 \
-  cmake3-data \
+  cmake \
   curl \
   gdb \
   git \
@@ -39,7 +38,6 @@ sudo apt-get install -qq \
   tmux \
   tree \
   unzip \
-  vim \
   wget \
   --no-install-recommends
 
@@ -49,15 +47,6 @@ cat <<EOF > /var/www/html/index.html
 <p>This should install mosh!</p>
 </body></html>
 EOF
-
-# # install Go
-# if ! [ -x "$(command -v go)" ]; then
-#   export GO_VERSION="1.13.1"
-#   wget "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz" 
-#   tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz" 
-#   rm -f "go${GO_VERSION}.linux-amd64.tar.gz"
-#   export PATH="/usr/local/go/bin:$PATH"
-# fi
 
 if ! [ -x "$(command -v go)" ]; then
   sudo add-apt-repository ppa:longsleep/golang-backports
