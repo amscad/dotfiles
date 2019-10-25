@@ -15,6 +15,7 @@ sudo apt-get install -qq \
   curl \
   gdb \
   git \
+  golang-go \
   hugo \
   jq \
   mosh \
