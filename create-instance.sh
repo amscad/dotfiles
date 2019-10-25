@@ -1,5 +1,5 @@
 #! /bin/bash
-export PROJECT_ID="scaddaddle"
+export PROJECT_ID="animated-vector-221810"
 gcloud config set project $PROJECT_ID
 
 export NETWORK="default-allow-ssh-mosh"
