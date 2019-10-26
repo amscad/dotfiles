@@ -1,7 +1,7 @@
 #! /bin/bash
 echo "==> Updating and upgrading packages ..."
 
-Add third party repositories
+#Add third party repositories
 add-apt-repository ppa:keithw/mosh-dev -y
 add-apt-repository ppa:jonathonf/vim -y
 
