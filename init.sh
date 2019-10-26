@@ -5,6 +5,9 @@ Add third party repositories
 add-apt-repository ppa:keithw/mosh-dev -y
 add-apt-repository ppa:jonathonf/vim -y
 
+add-apt-repository ppa:longsleep/golang-backports -y
+
+
 apt-get update
 apt-get upgrade -y
 
