@@ -35,6 +35,7 @@ sudo apt-get install -qq \
   tree \
   unzip \
   wget \
+  zsh \
   --no-install-recommends
 
 
@@ -43,3 +44,5 @@ cat <<EOF > /var/www/html/index.html
 <p>This should install mosh!</p>
 </body></html>
 EOF
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
