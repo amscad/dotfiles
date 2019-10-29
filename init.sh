@@ -46,3 +46,6 @@ cat <<EOF > /var/www/html/index.html
 EOF
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# for current logged user
+sudo chsh -s /bin/zsh "$USER"
