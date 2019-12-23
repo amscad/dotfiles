@@ -1,2 +1,10 @@
-Bootstrap script to setup a cloud shell environment for development
-Borrowed ideas from https://github.com/fatih/dotfiles/blob/master/workstation/bootstrap.sh
+# dotfiles
+## Installation
+git clone https://github.com/amscad/dotfiles.git ~/.dotfiles
+
+## Symlinks
+ln -s ~/.dotfiles/ohmyzsh/zshrc ~/.zshrc
+
+
+## ohmyzsh
+ln -s ~/.dotfiles/ohmyzsh/custom/themes/alex.zsh-theme ~/.oh-my-zsh/custom/themes/.zsh-theme
