@@ -48,7 +48,7 @@ cat <<EOF > /var/www/html/index.html
 </body></html>
 EOF
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/amscad/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # for current logged user
 sudo chsh -s /bin/zsh "$USER"
