@@ -19,7 +19,6 @@ sudo apt-get install -qq \
   docker \
   gdb \
   git \
-  golang-go \
   hugo \
   jq \
   mosh \
@@ -59,3 +58,7 @@ sudo chsh -s /bin/zsh "$USER"
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 
+# install golang using the ppa
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt-get update
+sudo apt-get install golang-go
