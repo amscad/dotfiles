@@ -21,11 +21,14 @@ sudo apt-get install -qq \
   build-essential \
   cmake \
   curl \
+  docker \
   gdb \
   git \
   hugo \
   jq \
   mosh \
+  nodejs \
+  npm \
   openssh-server \
   python3 \
   python3-dev \
@@ -34,11 +37,13 @@ sudo apt-get install -qq \
   python3-setuptools \
   python3-venv \
   python3-wheel \
+  ruby \
   silversearcher-ag \
   tmux \
   tree \
   unzip \
   wget \
+  zsh \
   --no-install-recommends
 
 
@@ -117,3 +122,16 @@ if [ ! -d "${HOME}/.fzf" ]; then
   ${HOME}/.fzf/install --bin --64 --no-bash --no-zsh --no-fish
   popd
 fi
+
+# install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# for current logged user
+sudo chsh -s /bin/zsh "$USER"
+
+# neovim, using a "common" linux image
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+chmod u+x nvim.appimage
+
+
+
