@@ -79,7 +79,7 @@ set autowrite                   " Automatically save before :next, :make etc.
 
 set guifont=Monaco:h16.00
 set background=dark
-colorscheme molokai
+"colorscheme molokai
 
 "store lots of :cmdline history
 set history=1000
