@@ -12,7 +12,8 @@ apk add python3 \
 	zsh \
 	sqlite \
 	jq \
-	mosh
+	mosh \
+	man
 
 # google cloud shell
 # but only if it has not already been downloaded
@@ -27,9 +28,3 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# neovim, using a "common" linux image
-curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-chmod u+x nvim.appimage
-
-# for current logged user
-#sudo chsh -s /bin/zsh "$USER"
