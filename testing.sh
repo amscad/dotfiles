@@ -23,5 +23,4 @@ gcloud compute instances create $INSTANCE_NAME \
         --image-project=$IMAGE_PROJECT \
         --machine-type=$INSTANCE_TYPE \
         --boot-disk-size=10GB \
-        --metadata startup-script-url=$STARTUP_SCRIPT \
         --tags=$NETWORK
