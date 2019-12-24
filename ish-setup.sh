@@ -20,6 +20,7 @@ apk add python3 \
 if [ ! -f "$HOME/google-cloud-sdk.tar.gz" ]; then
 #wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-274.0.0-linux-x86_64.tar.gz
 	curl https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-274.0.0-linux-x86_64.tar.gz -o $HOME/google-cloud-sdk.tar.gz
+	tar -zxvf $HOME/google-cloud-sdk.tar.gz  $HOME/google-cloud-sdk
 fi
 
 # install ohmyzsh - a useful set of tools for zsh
@@ -28,3 +29,9 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# copy custom themes and plugins to .oh-my-zsh, if it has been installed
+if [ -d "$HOME/.oh-my-zsh" ]; then
+	cp -r ohmyzsh/custom $HOMR/.oh-my-zsh
+fi
+
+echo "To complete the setup, navigate to the google-cloud-sdk folder and run './install.sh'"
