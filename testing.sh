@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 export PROJECT_ID="animated-vector-221810"
 gcloud config set project $PROJECT_ID
 
