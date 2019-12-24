@@ -27,6 +27,7 @@ fi
 # but only if it has not been installed already
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	cp zshrc $HOME/.zshrc
 fi
 
 # copy custom themes and plugins to .oh-my-zsh, if it has been installed
