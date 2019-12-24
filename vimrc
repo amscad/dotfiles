@@ -59,8 +59,8 @@ filetype plugin indent on  " required
 " 
 
 "remap semi colon to colon in normal mode - no recursive
-nore ; :
-nore : ;
+"nore ; :
+"nore : ;
 
 "allow backspacing over everything in insert mode
 set noerrorbells                " No beeps
