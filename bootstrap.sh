@@ -123,11 +123,6 @@ if [ ! -d "${HOME}/.fzf" ]; then
   popd
 fi
 
-# install ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# for current logged user
-sudo chsh -s /bin/zsh "$USER"
 
 # neovim, using a "common" linux image
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
@@ -135,3 +130,11 @@ chmod u+x nvim.appimage
 
 
 
+# install ohmyzsh - a useful set of tools for zsh
+# but only if it has not been installed already
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# for current logged user
+sudo chsh -s /bin/zsh "$USER"
