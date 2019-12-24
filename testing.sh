@@ -5,7 +5,7 @@ gcloud config set project $PROJECT_ID
 export NETWORK="default-allow-ssh-mosh"
 gcloud compute firewall-rules create $NETWORK --allow tcp:22,udp:60000-65000
 
-export INSTANCE_NAME="dev"
+export INSTANCE_NAME="dev2"
 export ZONE="europe-west2-a"
 export IMAGE_FAMILY="ubuntu-1804-lts"
 export IMAGE_PROJECT="ubuntu-os-cloud"
