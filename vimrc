@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colorschemes
-Plug 'fatih/molokai'
+" Plug 'fatih/molokai'
 " Plug 'molokai'
 Plug 'trusktr/seti.vim'
 
@@ -80,6 +80,7 @@ set autowrite                   " Automatically save before :next, :make etc.
 set guifont=Monaco:h16.00
 set background=dark
 "colorscheme molokai
+colorscheme ron
 
 "store lots of :cmdline history
 set history=1000
