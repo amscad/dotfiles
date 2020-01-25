@@ -120,6 +120,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 "*****************************************************************************
 "*****************************************************************************
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
