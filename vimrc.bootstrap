@@ -65,7 +65,7 @@ Plug 'SirVer/ultisnips'                     "ultimate snippet collections
 Plug 'honza/vim-snippets'                   "more snippets
 
 "" Color
-Plug 'tomasr/molokai'                       "vim port of molokai colorscheme
+Plug 'amscad/molokai'                       "vim port of molokai colorscheme
 
 "*****************************************************************************
 "" Custom bundles
