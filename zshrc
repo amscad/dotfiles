@@ -69,7 +69,7 @@ ZSH_THEME="alex"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vim ruby jsontools gcloud)
+#plugins=(git vim ruby jsontools gcloud)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,3 +106,10 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # The next line enables shell command completion for gcloud.
 #if [ -f '/root/google-cloud-sdk/completion.bash.inc' ]; then . '/root/google-cloud-sdk/completion.bash.inc'; fi
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/root/google-cloud-sdk/path.zsh.inc' ]; then . '/root/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/root/google-cloud-sdk/completion.zsh.inc' ]; then . '/root/google-cloud-sdk/completion.zsh.inc'; fi
