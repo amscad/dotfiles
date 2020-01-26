@@ -16,6 +16,7 @@ apk add python3 \
 	mosh \
 	man
 
+
 # google cloud shell
 # but only if it has not already been downloaded
 if [ ! -f "$HOME/google-cloud-sdk.tar.gz" ]; then
