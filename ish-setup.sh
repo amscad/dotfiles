@@ -2,6 +2,7 @@
 apk add python3 \
   	ruby \
 	vim \
+	vimdiff \
 	git \
 	neovim \
 	openssh \
