@@ -1,6 +1,6 @@
 # standard tools
 apk add python3 \
-  	ruby \
+  ruby \
 	vim \
 	vimdiff \
 	git \
