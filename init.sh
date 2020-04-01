@@ -48,11 +48,6 @@ cat <<EOF > /var/www/html/index.html
 </body></html>
 EOF
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# for current logged user
-sudo chsh -s /bin/zsh "$USER"
-
 
 # neovim, using a "common" linux image
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
@@ -62,3 +57,8 @@ chmod u+x nvim.appimage
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# for current logged user
+sudo chsh -s /bin/zsh "$USER"
