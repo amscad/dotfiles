@@ -19,3 +19,4 @@ apk add py-pygments
 gem install nokogiri -- --use-system-libraries --with-xml2-config=/usr/local/bin/xml2-config --with-xslt-config=/usr/local/bin/xslt-config
 
 gem install rails
+gem install etc
