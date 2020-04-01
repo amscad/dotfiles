@@ -1,5 +1,5 @@
 #! /bin/bash
-export PROJECT_ID="animated-vector-221810"
+export PROJECT_ID="propane-calling-270219"
 gcloud config set project $PROJECT_ID
 
 export NETWORK="default-allow-ssh-mosh"
