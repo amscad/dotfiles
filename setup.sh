@@ -48,9 +48,11 @@ fi
 
 # copy custom themes and plugins to .oh-my-zsh, if it has been installed
 if [ -d "$HOME/.oh-my-zsh" ]; then
-	cp -r $HOME/dotfiles/ohmyzsh/custom $HOME/.oh-my-zsh
-        cp $HOME/dotfiles/zshrc $HOME/.zshrc
-        source $HOME/.zshrc
+  SCRIPT_DIR="${PWD}"
+  printf 'Updating oh-my-zsh from %s\n' "$SCRIPT_DIR"
+  cp -r $SCRIPT_DIR/dotfiles/ohmyzsh/custom $HOME/.oh-my-zsh
+  #cp $HOME/dotfiles/zshrc $HOME/.zshrc
+  source $HOME/.zshrc
 fi
 
 # for current logged user
