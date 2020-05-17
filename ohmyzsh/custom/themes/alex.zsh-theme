@@ -1,10 +1,7 @@
 # local rvm="%{$fg[green]%}[$(rvm-prompt i v g)]%{$reset_color%}"
-
 PROMPT='
-%{$fg_bold[green]%}% `whoami`@`hostname` ~%{$fg_bold[cyan]%}%{$fg_bold[blue]%} % %{$reset_color%}
+%{$fg_bold[cyan]%}% `whoami`@`hostname` %{$fg_bold[green]%}%~${PWD} %{$fg_bold[cyan]%}%{$fg_bold[blue]%} % %{$reset_color%}
 %{$fg[green]%}➞  %{$reset_color%'
-
-
 
 
 # comment out until have rvm or rbenv installed.
