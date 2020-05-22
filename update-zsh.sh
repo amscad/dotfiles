@@ -4,6 +4,6 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
   printf '%s\n' "$SCRIPT_DIR"
 
   cp -r "$SCRIPT_DIR/ohmyzsh/custom" $HOME/.oh-my-zsh
-#        cp $HOME/dotfiles/zshrc $HOME/.zshrc
-        source $HOME/.zshrc
+  cp $SCRIPT_DIR/dotfiles/zshrc $HOME/.zshrc
+  source $HOME/.zshrc
 fi
