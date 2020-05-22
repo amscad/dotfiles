@@ -2,13 +2,13 @@
 echo "==> Updating and upgrading packages ..."
 
 #Add third party repositories
-add-apt-repository ppa:keithw/mosh-dev -y
-add-apt-repository ppa:jonathonf/vim -y
+sudo add-apt-repository ppa:keithw/mosh-dev -y
+sudo add-apt-repository ppa:jonathonf/vim -y
 
-add-apt-repository ppa:longsleep/golang-backports -y
+sudo dd-apt-repository ppa:longsleep/golang-backports -y
 
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 
 sudo apt-get install -qq \
   build-essential \
@@ -51,7 +51,7 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
   SCRIPT_DIR="${PWD}" 
   printf 'Updating oh-my-zsh from %s\n' "$SCRIPT_DIR"
   cp -r $SCRIPT_DIR/dotfiles/ohmyzsh/custom $HOME/.oh-my-zsh
-  #cp $HOME/dotfiles/zshrc $HOME/.zshrc
+  cp $SCRIPT_DIR/dotfiles/zshrc $HOME/.zshrc
   source $HOME/.zshrc
 fi
 
