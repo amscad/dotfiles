@@ -50,8 +50,8 @@ fi
 if [ -d "$HOME/.oh-my-zsh" ]; then
   SCRIPT_DIR="${PWD}" 
   printf 'Updating oh-my-zsh from %s\n' "$SCRIPT_DIR"
-  cp -r $SCRIPT_DIR/dotfiles/ohmyzsh/custom $HOME/.oh-my-zsh
-  cp $SCRIPT_DIR/dotfiles/zshrc $HOME/.zshrc
+  cp -r $SCRIPT_DIR/ohmyzsh/custom $HOME/.oh-my-zsh
+  cp $SCRIPT_DIR/zshrc $HOME/.zshrc
   source $HOME/.zshrc
 fi
 
