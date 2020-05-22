@@ -2,14 +2,14 @@
 echo "==> Updating and upgrading packages ..."
 
 #Add third party repositories
-add-apt-repository ppa:keithw/mosh-dev -y
-add-apt-repository ppa:jonathonf/vim -y
+sudo add-apt-repository ppa:keithw/mosh-dev -y
+sudo add-apt-repository ppa:jonathonf/vim -y
 
-add-apt-repository ppa:longsleep/golang-backports -y
+sudo add-apt-repository ppa:longsleep/golang-backports -y
 
 
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 
 sudo apt-get install -qq \
   apache2 \
