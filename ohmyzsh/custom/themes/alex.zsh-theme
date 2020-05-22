@@ -1,7 +1,9 @@
 # lo    cal rvm=“%{$fg[green]%}[$(rvm-prompt i v g)]%{$reset_color%}”
+# export PS1='[\u@\h \W]\$'
 PROMPT='
 %{$fg_bold[cyan]%}% `whoami`@`hostname` %{$fg_bold[green]%}%~% %{$fg_bold[cyan]%}%{$fg_bold[blue]%} % %{$reset_color%}
 %{$fg[green]%}➞  %{$reset_color%'
+
 
 
 # comment out until have rvm or rbenv installed.
