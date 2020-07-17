@@ -5,7 +5,7 @@ echo "==> Updating and upgrading packages ..."
 sudo add-apt-repository ppa:keithw/mosh-dev -y
 sudo add-apt-repository ppa:jonathonf/vim -y
 
-sudo add-apt-repository ppa:longsleep/golang-backports -y
+#sudo add-apt-repository ppa:longsleep/golang-backports -y
 
 
 sudo apt-get update
@@ -54,8 +54,6 @@ curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 
 # install golang using the ppa
-sudo add-apt-repository ppa:longsleep/golang-backports
-sudo apt-get update
 sudo apt-get install golang-go
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
