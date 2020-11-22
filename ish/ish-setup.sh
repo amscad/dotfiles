@@ -35,8 +35,8 @@ fi
 # copy custom themes and plugins to .oh-my-zsh, if it has been installed
 if [ -d "$HOME/.oh-my-zsh" ]; then
 	cp -r ${PWD}/ohmyzsh/custom $HOME/.oh-my-zsh
-    cp ${PWD}/zshrc $HOME/.zshrc
-    source $HOME/.zshrc
+	cp ${PWD}/zshrc $HOME/.zshrc
+	source $HOME/.zshrc
 fi
 
 echo "To complete the setup, navigate to the google-cloud-sdk folder and run './install.sh'"
