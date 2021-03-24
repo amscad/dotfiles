@@ -69,7 +69,7 @@ ZSH_THEME="alex"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vim ruby jsontools gcloud)
+plugins=(git vim ruby rails jsontools gcloud flutter golang vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,10 +101,68 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/root/google-cloud-sdk/path.zsh.inc' ]; then . '/root/google-cloud-sdk/path.zsh.inc'; fi
+# ######################## hombrew #######################################
+# homebrew, intel formula, from local folder
+#export PATH=$HOME/bin/homebrew/bin:$HOME/bin/homebrew/sbin:$PATH
+#alias ibrew='arch -x86_64 $HOME/bin/homebrew/bin/brew'
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/root/google-cloud-sdk/completion.zsh.inc' ]; then . '/root/google-cloud-sdk/completion.zsh.inc'; fi
+# homebrew, apple silicon formula, from default folder
+export PATH="/opt/homebrew/bin:$PATH"
+
+# From home brew: 
+#   For compilers to find ruby you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+#   For pkg-config to find ruby you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
+
+# turn off analytics
+export HOMEBREW_NO_ANALYTICS=1
+
+# ######################## java #########################################
+
+# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+# export JAVA_14_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home
+
+# export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+# export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+# export JAVA_14_HOME=$(/usr/libexec/java_home -v14)
+
+export JAVA_8_HOME="$HOME/bin/java/zulu8.50.0.1013-ca-jdk8.0.275-macos_aarch64/zulu-8.jdk/Contents/Home"
+export JAVA_11_HOME="$HOME/bin/java/zulu11.43.1007-ca-jdk11.0.9.1-macos_aarch64/zulu-11.jdk/Contents/Home"
+export JAVA_16_HOME="$HOME/bin/java/zulu16.0.65-ea-jdk16.0.0-ea.24-macos_aarch64/zulu-16.jdk/Contents/Home"
+
+export AEM_JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+alias java16='export JAVA_HOME=$JAVA_16_HOME'
+
+alias aem_java='export JAVA_HOME=$AEM_JAVA_HOME'
+
+java11
+
+export PATH="$HOME/bin/apache-maven-3.6.3/bin:$PATH"
+
+# for go 1.15
+#export PATH="$HOME/bin/go1.15/bin:$PATH"
+export PATH="$HOME/bin/go1.16/bin:$PATH"
+
+export PATH="$HOME/bin/flutter/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/alex/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alex/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/alex/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alex/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+# for ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$(go env GOPATH)/bin
+
