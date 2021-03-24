@@ -14,7 +14,8 @@ apk add python3 \
 	sqlite \
 	jq \
 	mosh \
-	man
+	man \
+	emacs
 
 
 ## google cloud shell
