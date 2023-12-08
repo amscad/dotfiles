@@ -1,0 +1,64 @@
+#casks - for extra functionality
+tap 'homebrew/bundle'                     # bundler for non ruby dependencies
+tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by homebrew cask
+tap 'homebrew/bundle'
+tap 'homebrew/cask-versions'
+
+# Command line utils
+brew 'coreutils'          # Those that come with macOS are outdated
+brew 'findutils'
+brew 'moreutils'
+
+# Unix tools
+# brew 'ctags'
+# brew 'cmake'
+# brew 'make'             # installs 'gmake' - needed for building an aem docker image for m1
+# brew 'iftop'            # Display an interface's bandwidth usage
+brew 'gh'               # Github commandline: https://github.com/cli/cli
+brew 'gpg'
+brew 'git'                # latest version of git
+brew 'grep'
+# brew 'htop'
+# brew 'httpie'
+# brew 'hub'              # GitHub commandline extensions: https://hub.github.com/
+brew 'jq'
+# brew 'mas'              # Mac App Store manager to install mac apps from the store using commandline
+# brew 'openssl'
+# brew 'readline'         # Utilities that one needs....
+brew 'vim'
+brew 'wget'
+# brew 'zsh'              # zsh is now the default,
+brew 'gnu-tar'
+
+# Command line search tools
+# brew 'ack'                          # ack - search tool designed for code, faster than grep
+# brew 'fzf'                          # fuzzy finder - written in go
+# brew 'pt'                           # the platinum searcher - supposedly faster than the silver searcher
+# brew 'ripgrep'                      # rip grep - written in rust and really fast
+# brew 'sift'                         # sift written in go
+# brew 'the_silver_searcher'          # the silver searcher
+
+# fancy diffs with git
+brew 'diff-so-fancy'
+
+# A command line http client, like CURL, only more fun to use
+# brew 'httpie'                       
+
+# postgres auto-complete and syntax highlighting from the command line
+# brew 'pgcli'
+
+# Programming language prerequisites and package managers
+brew 'libtool'          # asdf dependency
+brew 'libxslt'          # asdf dependency
+brew 'libyaml'          # asdf - should come after openssl
+
+# development tools
+# brew 'go'               # needed for docker, and other tools
+# brew 'go-md2man'        # needed for docker
+# brew 'python3'
+
+# ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts
+brew 'shellcheck'
+
+# swagger codegenerator - needs java 11 on the path
+# brew 'swagger-codegen'
