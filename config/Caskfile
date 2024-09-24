@@ -2,6 +2,7 @@
 tap 'homebrew/bundle'                     # bundler for non ruby dependencies
 tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by homebrew cask
 # tap 'homebrew/core'                       # default tap installed - for linux use 'homebrew/linux-brew/core'
+tap 'homebrew/cask-versions' 
 
 
 ############################################## Apps #############################################
@@ -22,7 +23,7 @@ cask 'orion'
 # cask 'libreoffice'
 
 cask 'jetbrains-toolbox'
-cask 'notion'
+# cask 'notion'
 cask 'objektiv'
 
 cask 'obsidian'
@@ -52,9 +53,9 @@ cask 'stats'		        # Useful stats at a glance from the menu
 ############################################## Programming stuff ###############################
 # Free programming editors - uncomment the one that you want to install
 # cask 'atom'
-# cask 'textmate'
+cask 'textmate'
 cask 'visual-studio-code'
-cask 'visual-studio-code-insiders'
+# cask 'visual-studio-code-insiders'
 # cask 'vscodium'
 
 # Non Free programming editors - licence needed to use - uncomment the one that you want to install

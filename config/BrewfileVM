@@ -1,8 +1,8 @@
 #casks - for extra functionality
-tap 'homebrew/bundle'                     # bundler for non ruby dependencies
-tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by homebrew cask
-tap 'homebrew/bundle'
-tap 'homebrew/cask-versions'
+# tap 'homebrew/bundle'                     # bundler for non ruby dependencies
+# tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by homebrew cask
+# tap 'homebrew/bundle'
+# tap 'homebrew/cask-versions'
 
 # Command line utils
 brew 'coreutils'          # Those that come with macOS are outdated
@@ -63,3 +63,6 @@ brew 'shellcheck'
 
 # swagger codegenerator - needs java 11 on the path
 # brew 'swagger-codegen'
+
+
+brew 'asdf'
