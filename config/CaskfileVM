@@ -97,4 +97,4 @@ cask 'iterm2'           # item - terminal alternative
 # mobile development
 # cask 'charles'
 
-cask 'scoll-reverser'
+cask 'scroll-reverser'
