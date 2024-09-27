@@ -65,5 +65,5 @@ brew 'shellcheck'
 
 brew 'mosh'
 
-# 
+# managing programming languages (alt to asdf)
 brew 'mise'
