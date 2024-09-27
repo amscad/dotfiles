@@ -54,7 +54,7 @@ cask 'firefox@developer-edition'
 # cask 'atom'
 # cask 'textmate'
 cask 'visual-studio-code'
-cask 'visual-studio-code-insiders'
+#cask 'visual-studio-code-insiders'
 # cask 'vscodium'
 
 # Non Free programming editors - licence needed to use - uncomment the one that you want to install
