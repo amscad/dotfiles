@@ -1,5 +1,5 @@
 # Install default programming languages
-if [[ -v OMAKUB_FIRST_RUN_LANGUAGES ]]; then
+if [[ -n "$OMAKUB_FIRST_RUN_LANGUAGES" ]]; then
 	languages=$OMAKUB_FIRST_RUN_LANGUAGES
 else
 	AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "PHP" "Python" "Elixir" "Rust" "Java")
