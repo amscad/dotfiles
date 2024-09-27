@@ -88,14 +88,6 @@ if test ! "$(command -v brew)"; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	# Evaluating shellenv to set needed properties to get brew to run - borrowed from homebrew install
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-	# check not running on CI
-	if [[ -z "${CI}" ]]; then
-		echo "Update Homebrew"
-		brew update
-		brew upgrade
-		brew doctor
-	fi
 fi
 
 ########################[ Install homebrew apps ]##############################
@@ -117,10 +109,13 @@ brew bundle --file "$CASKFILE"
 # 	sh "$USER.local"
 # fi
 
-########################[ ASDF version manager ]##############################
-echo "################### 4. Installing asdf stuff ################"
-echo "Setup node"
-sh "$BIN_PATH/asdfvm.sh"
+########################[ Programming Langugage version manager ]##############
+echo "################### 4. Installing mise stuff ################"
+echo "Setup mise"
+AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
+SELECTED_LANGUAGES=""
+export OMAKUB_FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
+source "$BIN_PATH/select-dev-language.sh"
 
 
 ########################[ OH MY ZSH ]#########################################
