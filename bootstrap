@@ -87,14 +87,6 @@ if test ! "$(command -v brew)"; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	# Evaluating shellenv to set needed properties to get brew to run - borrowed from homebrew install
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-	# check not running on CI
-	if [[ -z "${CI}" ]]; then
-		echo "Update Homebrew"
-		brew update
-		brew upgrade
-		brew doctor
-	fi
 fi
 
 ########################[ Install homebrew apps ]##############################

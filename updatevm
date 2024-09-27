@@ -1,3 +1,0 @@
-brew update
-brew bundle --file=config/BrewfileVM
-brew bundle --file=config/CaskfileVM
