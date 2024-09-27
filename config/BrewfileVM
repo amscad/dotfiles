@@ -65,4 +65,10 @@ brew 'shellcheck'
 # brew 'swagger-codegen'
 
 
-brew 'asdf'
+# networking 
+brew 'mosh'
+brew 'tailscale'
+
+# manage programming languages 
+brew 'mise'
+brew 'gum'

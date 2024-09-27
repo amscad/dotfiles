@@ -9,27 +9,27 @@ tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by
 # cask 'duet'                       # use an ipad as a second display - commercial
 cask 'hiddenbar'                  # hide selected menu items
 # cask 'spectacle'                  # window management from the keyboard
-cask 'spotify'                    # music
+#cask 'spotify'                    # music
 # cask 'whatsapp'                   # Using whatsapp on your mac
 
 # browsers
-# cask 'firefox-developer-edition' 
-cask 'firefox@developer-edition'
-cask 'brave-browser'
-cask 'google-chrome'
+cask 'firefox@developer-edition' 
+#cask 'firefox@developer-edition'
+#cask 'brave-browser'
+#cask 'google-chrome'
 # cask 'librewolf'
-cask 'orion'
+#cask 'orion'
 
 # libreoffice - open source office suite
 # cask 'libreoffice'
 
-cask 'jetbrains-toolbox'
+#cask 'jetbrains-toolbox'
 # cask 'notion'
-cask 'objektiv'
+#cask 'objektiv'
 
-cask 'obsidian'
+#cask 'obsidian'
 
-cask 'beyond-compare'
+#cask 'beyond-compare'
 
 
 ############################################## Keyboard configuration  ###############################
@@ -55,7 +55,7 @@ cask 'stats'		        # Useful stats at a glance from the menu
 # Free programming editors - uncomment the one that you want to install
 # cask 'atom'
 cask 'textmate'
-cask 'visual-studio-code'
+#cask 'visual-studio-code'
 # cask 'visual-studio-code-insiders'
 # cask 'vscodium'
 
@@ -65,12 +65,12 @@ cask 'visual-studio-code'
 
 # Quicklook
 # https://github.com/sindresorhus/quick-look-plugins
-brew 'highlight'			# added here as it is logical to keep these grouped
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlimagesize'
-cask 'qlvideo'
+#brew 'highlight'			# added here as it is logical to keep these grouped
+#cask 'qlmarkdown'
+#cask 'quicklook-json'
+#cask 'quicklook-csv'
+#cask 'qlimagesize'
+#cask 'qlvideo'
 
 ############################################## Remote Desktop  ###############################
 # cask 'parallels-access'
@@ -80,7 +80,7 @@ cask 'google-drive'
 
 # apps
 cask 'iterm2'           # item - terminal alternative
-cask 'docker'           # docker - containerise all the things
+# cask 'docker'           # docker - containerise all the things
 # cask "gpg-suite"        # for encryption
 
 cask 'postman'          # Postman - for API development and testing
@@ -94,8 +94,10 @@ cask 'postman'          # Postman - for API development and testing
 
 
 # display / resolution improvments / control
-cask 'betterdisplay'
+#cask 'betterdisplay'
 
 
 # mobile development
-cask 'charles'
+#cask 'charles'
+
+cask 'scroll-reverser'
