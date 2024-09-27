@@ -64,3 +64,6 @@ brew 'shellcheck'
 # brew 'swagger-codegen'
 
 brew 'mosh'
+
+# 
+brew 'mise'
