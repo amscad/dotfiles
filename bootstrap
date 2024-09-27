@@ -115,10 +115,10 @@ brew bundle --file "$CASKFILE"
 # fi
 
 ########################[ ASDF version manager ]##############################
-echo "################### 4. Installing asdf  ###################"
-if [ ! -d "$HOME/.asdf" ]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf 
-fi
+# echo "################### 4. Installing asdf  ###################"
+# if [ ! -d "$HOME/.asdf" ]; then
+#   git clone https://github.com/asdf-vm/asdf.git ~/.asdf 
+# fi
 
 ########################[ OH MY ZSH ]#########################################
 echo "################### 5. Installing OHMYZSH ###################"
