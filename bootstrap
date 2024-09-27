@@ -12,6 +12,7 @@ SCRIPT_PATH=$(dirname "$(
 CONFIG_PATH="$SCRIPT_PATH/config"		
 BREWFILE="$CONFIG_PATH/Brewfile"
 CASKFILE="$CONFIG_PATH/Caskfile"
+BIN_PATH="$SCRIPT_PATH/bin"
 
 abort() {
 	printf "%s\n" "$@"
@@ -106,11 +107,13 @@ brew bundle --file "$CASKFILE"
 # 	sh "$USER.local"
 # fi
 
-########################[ ASDF version manager ]##############################
-# echo "################### 4. Installing asdf  ###################"
-# if [ ! -d "$HOME/.asdf" ]; then
-#   git clone https://github.com/asdf-vm/asdf.git ~/.asdf 
-# fi
+########################[ Programming languages version manager ]#############
+echo "################### 4. Installing mise  ###################"
+AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
+SELECTED_LANGUAGES="Ruby on Rails","Node.js,Go,Python"
+export OMAKUB_FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
+source "$BIN_PATH/select-dev-language.sh"
+
 
 ########################[ OH MY ZSH ]#########################################
 echo "################### 5. Installing OHMYZSH ###################"
