@@ -63,7 +63,9 @@ brew 'shellcheck'
 # swagger codegenerator - needs java 11 on the path
 # brew 'swagger-codegen'
 
+# networking
 brew 'mosh'
+brew 'tailscale'
 
 # managing programming languages (alt to asdf)
 brew 'mise'
