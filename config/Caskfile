@@ -2,7 +2,7 @@
 tap 'homebrew/bundle'                     # bundler for non ruby dependencies
 tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by homebrew cask
 # tap 'homebrew/core'                       # default tap installed - for linux use 'homebrew/linux-brew/core'
-tap 'homebrew/cask-versions' 
+
 
 
 ############################################## Apps #############################################
@@ -13,7 +13,8 @@ cask 'spotify'                    # music
 # cask 'whatsapp'                   # Using whatsapp on your mac
 
 # browsers
-cask 'firefox-developer-edition'
+# cask 'firefox-developer-edition' 
+cask 'firefox@developer-edition'
 cask 'brave-browser'
 cask 'google-chrome'
 # cask 'librewolf'
