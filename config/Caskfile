@@ -101,3 +101,5 @@ cask 'postman'          # Postman - for API development and testing
 #cask 'charles'
 
 cask 'scroll-reverser'
+
+cask 'alacritty'
