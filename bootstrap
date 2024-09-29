@@ -104,7 +104,8 @@ echo "################### 4. Running personal stuff ###################"
 # run anything from the user local file,
 if [ -f "$USER.local" ]; then
 	# shellcheck disable=SC1090				# not sure if still needed
-	sh "$USER.local"
+	#sh "$USER.local"
+	source "$USER.local"
 fi
 
 
