@@ -35,7 +35,7 @@ elif [ "$VM" == "false" ]; then
 fi
 echo "BREWFILE: $BREWFILE"
 echo "CASKFILE: $CASKFILE"
-exit 1
+
 
 abort() {
 	printf "%s\n" "$@"
