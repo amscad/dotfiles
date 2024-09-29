@@ -117,9 +117,9 @@ echo "################### 3. Updating Homebrew formulae ###################"
 brew update --force # https://github.com/Homebrew/brew/issues/1151
 echo "Updated homebrew forcefully"
 
-echo "Installing from brewfile"
+echo "Installing from brewfile $BREWFILE"
 brew bundle --file "$BREWFILE"
-
+echo "Installing from caskfile $CASKFILE"
 brew bundle --file "$CASKFILE"
 
 ########################[ Run user customisations ]############################
