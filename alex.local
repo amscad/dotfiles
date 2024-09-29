@@ -1,0 +1,6 @@
+########################[ Programming languages version manager ]#############
+echo "################### 4.1 Installing mise  ###################"
+AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
+SELECTED_LANGUAGES="Ruby on Rails","Node.js,Go,Python"
+export OMAKUB_FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
+source "$BIN_PATH/select-dev-language.sh"
