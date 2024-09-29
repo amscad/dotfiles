@@ -1,5 +1,5 @@
 # required
-if [ ! -d ~/.config/nvim ]; then
+if [ ! -f ~/.config/nvim ]; then
     mv ~/.config/nvim{,.bak}
 fi 
 
