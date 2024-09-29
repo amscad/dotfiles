@@ -65,7 +65,7 @@ brew 'shellcheck'
 
 # networking
 brew 'mosh'
-brew 'tailscale'
+# brew 'tailscale'      # may not be needed as the cask installs the main app (I think)
 
 # managing programming languages (alt to asdf)
 brew 'mise'
