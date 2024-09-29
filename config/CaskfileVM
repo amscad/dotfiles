@@ -98,3 +98,8 @@ cask 'iterm2'           # item - terminal alternative
 # cask 'charles'
 
 cask 'scroll-reverser'
+
+cask 'alacritty'
+
+# terminal fonts
+cask 'font-dejavu-sans-mono-nerd-font'
