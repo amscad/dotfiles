@@ -10,9 +10,32 @@ SCRIPT_PATH=$(dirname "$(
 
 # Files to include
 CONFIG_PATH="$SCRIPT_PATH/config"		
+BIN_PATH="$SCRIPT_PATH/bin"
+# Set default BREWFILE/CASKFILE
 BREWFILE="$CONFIG_PATH/Brewfile"
 CASKFILE="$CONFIG_PATH/Caskfile"
-BIN_PATH="$SCRIPT_PATH/bin"
+
+# Check for command line parameters
+for arg in "$@"; do
+    case $arg in
+        --vm=*)
+            VM="${arg#*=}"
+            shift
+            ;;
+    esac
+done
+
+# Update BREWFILE/CASKFILE based on 'vm' parameter
+if [ "$VM" == "true" ]; then
+    BREWFILE="$CONFIG_PATH/BrewfileVM"
+    CASKFILE="$CONFIG_PATH/CaskfileVM"
+elif [ "$VM" == "false" ]; then
+    BREWFILE="$CONFIG_PATH/Brewfile"
+    CASKFILE="$CONFIG_PATH/Caskfile"
+fi
+echo "BREWFILE: $BREWFILE"
+echo "CASKFILE: $CASKFILE"
+exit 1
 
 abort() {
 	printf "%s\n" "$@"
