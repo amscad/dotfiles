@@ -83,7 +83,6 @@ done 2>/dev/null &
 
 ########################[ Check homebrew is installed ]########################
 echo "############### 2. Using homebrew to install software ###############"
-
 if test ! "$(command -v brew)"; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	# Evaluating shellenv to set needed properties to get brew to run - borrowed from homebrew install
@@ -101,18 +100,12 @@ brew bundle --file "$BREWFILE"
 brew bundle --file "$CASKFILE"
 
 ########################[ Run user customisations ]############################
-# # run anything from the user local file,
-# if [ -f "$USER.local" ]; then
-# 	# shellcheck disable=SC1090				# not sure if still needed
-# 	sh "$USER.local"
-# fi
-
-########################[ Programming languages version manager ]#############
-echo "################### 4. Installing mise  ###################"
-AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "Python" "Elixir" "Rust" "Java")
-SELECTED_LANGUAGES="Ruby on Rails","Node.js,Go,Python"
-export OMAKUB_FIRST_RUN_LANGUAGES=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
-source "$BIN_PATH/select-dev-language.sh"
+echo "################### 4. Running personal stuff ###################"
+# run anything from the user local file,
+if [ -f "$USER.local" ]; then
+	# shellcheck disable=SC1090				# not sure if still needed
+	sh "$USER.local"
+fi
 
 
 ########################[ OH MY ZSH ]#########################################
