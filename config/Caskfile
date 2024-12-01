@@ -43,6 +43,7 @@ cask 'stats'		        # Useful stats at a glance from the menu
 # cask 'vlc'
 # cask 'vmware-fusion'
 # brew 'youtube-dl'
+cask 'yt-dlp'
 # cask 'virtualbox'
 
 # cask 'tunnelbear'
@@ -99,7 +100,7 @@ cask 'betterdisplay'
 
 
 # mobile development
-#cask 'charles'
+cask 'charles'
 
 #cask 'scroll-reverser'
 
@@ -114,3 +115,10 @@ cask 'font-hack-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'font-roboto-mono-nerd-font'
 
+cask 'utm'
+
+cask 'typora'
+
+cask 'figma'
+
+cask 'virtualbuddy'
