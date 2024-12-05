@@ -13,7 +13,7 @@
 
 # browsers
 cask 'firefox@developer-edition'
-# cask 'brave-browser'
+cask 'brave-browser'
 # cask 'google-chrome'
 # cask 'librewolf'
 # cask 'orion'
