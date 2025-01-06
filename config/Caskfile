@@ -8,7 +8,7 @@ tap 'buo/cask-upgrade'                    # to upgrade all the apps installed by
 ############################################## Apps #############################################
 # cask 'duet'                       # use an ipad as a second display - commercial
 cask 'hiddenbar'                  # hide selected menu items
-# cask 'spectacle'                  # window management from the keyboard
+cask 'rectangle'                  # window management from the keyboard
 cask 'spotify'                    # music
 # cask 'whatsapp'                   # Using whatsapp on your mac
 
@@ -43,7 +43,7 @@ cask 'stats'		        # Useful stats at a glance from the menu
 # cask 'vlc'
 # cask 'vmware-fusion'
 # brew 'youtube-dl'
-cask 'yt-dlp'
+# cask 'yt-dlp'
 # cask 'virtualbox'
 
 # cask 'tunnelbear'
@@ -100,7 +100,7 @@ cask 'betterdisplay'
 
 
 # mobile development
-cask 'charles'
+#cask 'charles'
 
 #cask 'scroll-reverser'
 
