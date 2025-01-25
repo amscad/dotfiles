@@ -83,7 +83,11 @@ cask 'google-drive'
 # apps
 cask 'iterm2'           # item - terminal alternative
 cask 'docker'           # docker - containerise all the things
-cask 'orbstack'         # orbstack - alternative to docker
+cask 'orbstack'         # orbstack - alternative to docker - faster, but paid for (free for personal use)
+                        # the fast, light, and simple way to run containers and Linux machines. 
+                        # OrbStack offers excellent performance and seamless integration with macOS.
+cask 'lima'             # lima - launches Linux virtual machines with automatic file sharing and port forwarding (similar to WSL2).
+                        # open source
 # cask "gpg-suite"        # for encryption
 
 cask 'postman'          # Postman - for API development and testing
