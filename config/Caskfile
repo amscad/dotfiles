@@ -83,6 +83,7 @@ cask 'google-drive'
 # apps
 cask 'iterm2'           # item - terminal alternative
 cask 'docker'           # docker - containerise all the things
+cask 'orbstack'         # orbstack - alternative to docker
 # cask "gpg-suite"        # for encryption
 
 cask 'postman'          # Postman - for API development and testing
